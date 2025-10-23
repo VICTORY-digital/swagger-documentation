@@ -4,7 +4,7 @@ use OpenApi\Analysers\AttributeAnnotationFactory;
 use OpenApi\Analysers\DocBlockAnnotationFactory;
 
 return [
-    'version' => '1.0.0',
+    'version' => '3.0.0',
 
     'inputPaths' => [
         base_path('src')

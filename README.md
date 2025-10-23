@@ -3,5 +3,5 @@
 Для того чтобы опубликовать файл конфигурации, выполните команду:
 
 ```bash
-php artisan vendor:publish --tag="victorygroup-documentation"
+php artisan vendor:publish --tag="victorygroup-documentation-config"
 ```
