@@ -49,20 +49,12 @@ final class JsonContentWithResourceKey extends JsonContent
                     ),
                 ],
                 $pagination ? [
-                    new Property(
-                        property: 'meta',
-                        description: 'Мета информация',
-                        required: ['total', 'per_page', 'current_page', 'last_page'],
-                        properties: [
-                            new Property(property: 'total', description: 'Сколько всего элементов', type: 'integer'),
-                            new Property(property: 'per_page', description: 'Максимальное кол-во элементов на странице', type: 'integer'),
-                            new Property(property: 'current_page', description: 'Текущая страница', type: 'integer'),
-                            new Property(property: 'last_page', description: 'Последняя страница', type: 'integer'),
-                            new Property(property: 'from', description: 'Номер первой записи по порядку в текущей выборке', type: 'integer'),
-                            new Property(property: 'to', description: 'Номер последней записи по порядку в текущей выборке', type: 'integer'),
-                        ],
-                        type: 'object',
-                    ),
+                    new Property(property: 'total', description: 'Сколько всего элементов', type: 'integer'),
+                    new Property(property: 'per_page', description: 'Максимальное кол-во элементов на странице', type: 'integer'),
+                    new Property(property: 'current_page', description: 'Текущая страница', type: 'integer'),
+                    new Property(property: 'last_page', description: 'Последняя страница', type: 'integer'),
+                    new Property(property: 'from', description: 'Номер первой записи по порядку в текущей выборке', type: 'integer'),
+                    new Property(property: 'to', description: 'Номер последней записи по порядку в текущей выборке', type: 'integer'),
                 ] : [],
             ),
         );
