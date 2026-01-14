@@ -38,7 +38,17 @@ final class JsonContentWithResourceKey extends JsonContent
 
         parent::__construct(
             title: $title,
-            required: [$resourceKey],
+            required: array_merge([$resourceKey],
+                $pagination ?
+                    [
+                        'total',
+                        'per_page',
+                        'current_page',
+                        'last_page',
+                        'from',
+                        'to',
+                    ] : []
+            ),
             properties: array_merge(
                 [
                     new Property(
