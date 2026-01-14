@@ -29,7 +29,7 @@ class SwaggerDocumentationCommand extends Command
             ->setVersion(config('victorygroup-documentation.version'))
             ->setConfig([])
             ->setAnalyser($analyser)
-            ->generate(Util::finder(config('victorygroup-documentation.inputPaths')));
+            ->generate(config('victorygroup-documentation.inputPaths'));
 
         $outputPath = config('victorygroup-documentation.outputPath');
         $openapi->saveAs($outputPath);
